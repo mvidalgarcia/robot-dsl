@@ -6,25 +6,59 @@ class Robot {
 		this
 	}
 	
-	def at (vel) {
-		//print "at $vel"
+	def move(info, dir) {
+		print "Moving $dir at ${info.at}"
+	}
+	
+	def at (speed) {
+		print "at $speed"
+	}
+	
+	def jump(dir, distance) {
+		print "Jumping $dir $distance\n"
+	}
+	
+	def sleep(way) {
+		print "Sleeping $way "
 		this
 	}
 	
-//	String direction = "left";
-//	String distance = "20";
-//	String distanceUnit = "km";
-//	String timeUnit = "h";
-//
-//	String uri = String.format("http://robotmanager.azurewebsites.net/api/move?direction=%s&distance=%s&distanceUnit=%s&timeUnit=%s",
-//		direction, distance, distanceUnit, timeUnit);
-//	URL url = new URL(uri);
-//	HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//	connection.setRequestMethod("GET");
-//	connection.setRequestProperty("Accept", "application/json");
-//
-//	BufferedReader br = new BufferedReader(new InputStreamReader((connection.getInputStream())));
-//	String output = br.readLine().split(":")[1].replace("}", "").replace("\"", "");
-//	System.out.println(output);
+	def during(time) {
+		print "during $time\n"
+	}
+	
+	def fight(way) {
+		print "Ready to fight $way "
+		this
+	}
+	
+	def against(enemy) {
+		print "against $enemy\n"
+	}
+	
+	def cook(food) {
+		print "Cooking $food "
+		this
+	}
+	
+	def to(people) {
+		print "to $people"
+	}
+	
+	def draw(info, drawing) {
+		print "Drawing $drawing of size ${info.width} x ${info.height}\n"
+	}
+	
+	def say(SpeakingTone tone) {
+		if (tone == tone.loud)
+			print "ROBOT YELLS: "
+		if (tone == tone.low)
+			print "Robot whispers: "
+		this
+	}
+	
+	def sentence(s) {
+		print s+"\n"
+	}
 
 }

@@ -1,9 +1,11 @@
-package robot
+package robot.distance
 
 enum DistanceUnit {
 	centimeter('cm', 0.01),
 	meter('m', 1),
-	kilometer('km', 1000)
+	kilometer('km', 1000),
+	yard('yd', 0.9144),
+	feet('ft', 0.3048)
 	
 	String abbreviation
 	double multiplier
